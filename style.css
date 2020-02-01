@@ -1,3 +1,35 @@
 body {
-    color: red;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section {
+    /* padding: 0 100px; */
+    background-image: url("images/superbowlbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    min-width: 90%;
+    opacity: 1;
+        
+}
+
+.text {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    max-width: 500px;
+    background: rgba(255,255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    /* display: flex; */
+    /* height: auto; */
+}
+.text h2 {
+    margin: 10px;
+}
+.text p {
+    margin: 10px;
 }
