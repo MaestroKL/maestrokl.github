@@ -6,3 +6,8 @@
 01/30/2020:
 1. get SUPERBOWL API
 2. Obtain key. successfully have working URL (but console.log not working; awaiting instructor assistance)
+
+1/31/2020: 
+1. HTML: inserted placeholder LOREM text
+2. CSS styling of background
+3. CSS insertion of containers

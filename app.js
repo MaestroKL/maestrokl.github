@@ -8,11 +8,11 @@
 
     // API Key: e901378c0864450f84cb2993bd089fa7
     // Login: leikevy@//gaproject1
-
-(()=>{
+// console.log('app.js')
+$(()=>{
 
     $.ajax({
-        url: "https://api.sportsdata.io/v3/nfl/scores/xml/TeamSeasonStats/REG2019?key=e901378c0864450f84cb2993bd089fa7",
+        url: "https://api.sportsdata.io/v3/nfl/scores/json/TeamSeasonStats/REG2019?key=e901378c0864450f84cb2993bd089fa7",
         success: function(data){
             console.log(data)
         }, 
@@ -22,6 +22,7 @@
     })
 
 })
+
 
 
 

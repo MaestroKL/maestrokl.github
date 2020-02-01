@@ -4,10 +4,11 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
-/* section includes text, Factor 1-20, API input, rating scales  */
+
+/* 
+####section includes text, Factor 1-20, API input, rating scales#### 
 section {
-    /* padding: 0 100px; */
-    background-image: url("images/superbowlbackground.png");
+        background-image: url("images/superbowlbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -18,10 +19,11 @@ section {
 }
 
 .intro, .chiefsapi, .fortyninerapi {
-    border: 2px solid black;
+    border: 10px solid gold;
     padding: 20px;
     margin: 20px;
     max-width: 40%;
+    min-width: 40%;
     max-height: 200px;
     background: rgba(255,255, 255, 0.9);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
@@ -34,13 +36,14 @@ section {
     margin: 10px;
 }
 
-/* Flex containers in general: includes apiflexcontainer and ratingflexcontainer */
+####Flex containers in general: includes apiflexcontainer and ratingflexcontainer####
 .flexcontainer {
     flex-direction: column;
     min-width: 60%;
 }
 
-/* next three are API flex containers; apiflexcontainer includes chiefapi and fortyninerapi */
+
+####next three are API flex containers; apiflexcontainer includes chiefapi and fortyninerapi####
 .apiflexcontainer {
     display: flex;
     justify-content: center;
@@ -48,24 +51,59 @@ section {
 
 .chiefsapi {
     width: 100%;
+    height: 400px;
 }
 
 .fortyninerapi {
     width: 100%;
+    height: 400px;
 }
 
-/* next 2 are user experience rating scales: fivetofive and zerototen */
+####next 2 are user experience rating scales: ratingflexocontainer contains fivetofive and zerototen.####
 
 .ratingflexcontainer {
-    justify-content: center;
-}
+    justify-content: space-between;
+    max-width: 40%;
+    min-width: 40%;
+ }
 
 .fivetofive, .zerototen {
-    border: 2px solid black;
+    border: 10px solid gold;
     padding: 20px;
     margin: 20px;
-    width: 90%;
-    max-height: 10px;
+    width: 100%;
+    max-height: 40px;
     background: rgba(255,255, 255, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
-}
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9); 
+} */
+
+
+
+/* Initiating GRID as Flexbox is difficult to position DIV boxes */
+body {
+    background-image: url("images/superbowlbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    min-width: 90%;
+    opacity: 1;
+    }
+
+/* wrapper includes intro, chiefs, 49ers, NE */
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 4fr 3fr 3fr 3fr;
+        grid-auto-rows: minmax(100px, 400px);
+    }
+
+    .wrapper > div {
+        border: 1px solid gold;
+        padding: 10px; 
+        margin: 5px;
+        background: rgba(255,255, 255, 0.9);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+    }
+
+/*  */
