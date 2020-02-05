@@ -11,3 +11,10 @@
 1. HTML: inserted placeholder LOREM text
 2. CSS styling of background
 3. CSS insertion of containers
+
+2/1/2020: 
+1. Connected API
+2. Switched from flexbox to grid
+
+2/4/2020: 
+1. 
