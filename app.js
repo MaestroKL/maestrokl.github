@@ -70,72 +70,142 @@ function renderTeams(data){
 
 // Each variable in slidesShowSlides will insert 1) Insert new API info 2) text to class=TIP 
 
-let Season = function (){
-    $(".tip").replaceWith("<div>" + "Season Winning Percentage" + "</div>");
-    $(".KC").replaceWith("12-4");
-    $(".NE").replaceWith("12-4");
-    $(".SF").replaceWith("13-3");
+const Season  = ()=>{
+    $(".tip").text("Season Winning Percentage: Regular season wins divided by losses.");
+    $(".NE h1").text("Patriots")
+    $(".KC p").text("12-4");
+    $(".NE p").text("12-4");
+    $(".SF p").text("13-3");
+    $(".KC #KC1").text("")
+    $(".KC #KC2").text("")
+    $(".KC #KC3").text("")
+    $(".NE #NE1").text("")
+    $(".NE #NE2").text("")
+    $(".NE #NE3").text("");
+    $(".SF #SF1").text("")
+    $(".SF #SF2").text("")
+    $(".SF #SF3").text("");
     };
-console.log(Season)
 
-let HeadtoHead = function (){
-    $tip.text("Head to head in 2019-2020 season");
-    $KC.text("17");
-    $NE.text("SF WIN");
-    $SF.text("27");
+const HeadtoHead  = ()=>{
+    $(".tip").text("Head-to-head match in 2019-2020 season.");
+    $(".NE h1").text("Victory: SF")
+    $(".KC p").text("17");
+    $(".NE p").text("49ers WIN");
+    $(".SF p").text("27");
     };
     
-let CoachRanking = function (){
-    $tip.text("Coach ranking at the end of 2019=2020 regular season");
-    $KC.text("Andy Reid #5");
-    $NE.text("Bill Belichick #1");
-    $SF.text("Kyle Shanahan #14");
+const CoachRanking  = ()=>{
+    $(".tip").text("Coach ranking by the end of 2019-2020 regular season.");
+    $(".NE h1").text("Patriots")
+    $(".KC p").text("Andy Reid #5");
+    $(".NE p").text("Bill Belichick #1");
+    $(".SF p").text("Kyle Shanahan #14");
     };
 
-let QbRanking = function (){
-    $tip.text("QB ranking at the end of 2019-2020 regular season");
-    $KC.text("Patrick Hahomes: #1");
-    $NE.text("Tom Brady: #3");
-    $SF.text("Jimmy Garoppolo: #15");
+// let QbRanking = function (){
+//     $(".tip p").text("QB ranking at the end of 2019-2020 regular season");
+//     $(".KC p").text("Patrick Hahomes: #1");
+//     $(".NE p").text("Tom Brady: #3");
+//     $(".SF p").text("Jimmy Garoppolo: #15");
+//     };
+
+const QbRanking = ()=> {
+    $(".tip").text("QB ranking at the end of 2019-2020 regular season.");
+    $(".NE h1").text("Patriots")
+    $(".KC p").text("Patrick Hahomes: #1");
+    $(".NE p").text("Tom Brady: #3");
+    $(".SF p").text("Jimmy Garoppolo: #15");
     };
     
-let Offense = function (){
-    $tip.text("Factors include First Downs, Offensive yards per play, total TouchDowns");
-    $KC.text(chiefs[0].FirstDowns + chiefs[0].OffensiveYardsPerPlay + chiefs[0].Touchdowns);
-    $NE.text(patriots[0].FirstDowns + patriots[0].OffensiveYardsPerPlay + patriots[0].Touchdowns);
-    $SF.text(niners[0].FirstDowns + niners[0].OffensiveYardsPerPlay + niners[0].Touchdowns);
+const Offense  = ()=>{
+    $(".tip").text("Selected notable factors: (1)First Downs, (2)Offensive yards per play, (3)Total Touchdowns.");
+    $(".NE h1").text("Patriots")
+    $(".KC p").text("");
+    $(".NE p").text("");
+    $(".SF p").text("");
+    $(".KC #KC1").text("Number of First Downs: " + chiefs[0].FirstDowns)
+    $(".KC #KC2").text("Number of Offensive Yards Per Play: " + chiefs[0].OffensiveYardsPerPlay)
+    $(".KC #KC3").text("Total Touchdowns: " + chiefs[0].Touchdowns)
+    $(".NE #NE1").text("Number of First Downs: " + patriots[0].FirstDowns)
+    $(".NE #NE2").text("Number of Offensive Yards Per Play: " + patriots[0].OffensiveYardsPerPlay)
+    $(".NE #NE3").text("Total Touchdowns: " + patriots[0].Touchdowns)
+    $(".NE #NE1").text("Number of First Downs: " + niners[0].FirstDowns)
+    $(".SF #SF2").text("Number of Offensive Yards Per Play: " + niners[0].OffensiveYardsPerPlay)
+    $(".SF #SF3").text("Total Touchdowns: " + niners[0].Touchdowns)
     };
 
-let Defense = function (){
-    $tip.text("Factors include keeping Opponent's First Downs, Keeping Offensive yards per play, total TouchDowns allowed");
-    $KC.text(chiefs[0].OpponentFirstDowns + chiefs[0].OpponentOffensivePlays + chiefs[0].OpponentTouchdowns);
-    $NE.text(patriots[0].OpponentFirstDowns + patriots[0].OpponentOffensivePlays + patriots[0].OpponentTouchdowns);
-    $SF.text(niners[0].OpponentFirstDowns + niners[0].OpponentOffensivePlays + niners[0].OpponentTouchdowns);
+const Defense = ()=>{
+    $(".tip").text("Selected notable factors: (1)Opponent's First Downs, (2)Opponent's Offensive yards per play, (3)Opponent Touchdowns allowed");
+    $(".KC p").text("");
+    $(".NE p").text("");
+    $(".SF p").text("");
+    $(".NE h1").text("Patriots")
+    $(".KC #KC1").text("Total Opponent First Downs: " + chiefs[0].OpponentFirstDowns)
+    $(".KC #KC2").text("Frequency of opponent plays allowed: " + chiefs[0].OpponentOffensivePlays)
+    $(".KC #KC3").text("Allowed touchdowns: " + chiefs[0].OpponentTouchdowns)
+    $(".NE #NE1").text("Total Opponent First Downs: " + patriots[0].OpponentFirstDowns)
+    $(".NE #NE2").text("Frequency of opponent  plays allowed: " + patriots[0].OpponentOffensivePlays)
+    $(".NE #NE3").text("Allowed  touchdowns: " + patriots[0].OpponentTouchdowns);
+    $(".SF #SF1").text("Total Opponent First Downs: " + niners[0].OpponentFirstDowns)
+    $(".SF #SF2").text("Frequency of opponent plays allowed: " + niners[0].OpponentOffensivePlays)
+    $(".SF #SF3").text("Allowed touchdowns: " + niners[0].OpponentTouchdowns);
     };
     
 // Carousel function: 
 let i = 0; 
-let slideShowSlides = [Season, HeadtoHead, QbRanking, CoachRanking, Offense, Defense];
 
 
+let changeSlide = ()=> {
+    let slideShowSlides = [Season, HeadtoHead, QbRanking, CoachRanking, Offense, Defense];
+        if(i <(slideShowSlides.length-1)){
+            i++;
+            console.log(i);
+            slideShowSlides[i];
+        
+        } else {
+            i = 0;
+        }
 
-console.log(Season)
+}
 
-// let function changeSlide (){
-//     document.slide.src = slideShowSlides[i];
-//         if(i <slideShowSlides.length-1){
-//             i++;
-//         } else {
-//             i = 0;
-//         }
-
-// }
-// // Button Listeners
-// nxtBtn.addEventListener('click', ()=>{
-//     car
-// })
+// Button Listeners
+// $('#nextBtn').on('click', changeSlide)
 
 
+container = 0;
+
+$('#nextBtn').on('click', ()=>{
+    
+    container++
+    if (container === 1 ){
+        Season()
+        console.log("season hit")
+    }
+    else if (container === 2 ){
+        HeadtoHead()
+        console.log("head hit")
+    }
+    else if (container === 3 ){
+       QbRanking()
+        console.log("qb hit")
+    }
+    else if (container === 4 ){
+       CoachRanking()
+        console.log("coach hit")
+    }
+    else if (container === 5 ){
+        Offense()
+         console.log("offense hit")
+    }     
+    else if (container === 6 ){
+        Defense()
+        console.log("defense hit")
+    }
+    else {container = 1
+        Season()
+    }
+})
 
 
 

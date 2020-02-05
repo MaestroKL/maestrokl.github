@@ -106,13 +106,51 @@ body {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
     }
 
-    .carousel {
+    .carousel{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-column-start: 1;
         grid-column-end: 3;
-        height: 200px;
+        height: auto;
 
+    }
+
+    #apioutput{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        height: auto; 
+    }
+
+
+    .KC, .SF, .NE {
+        text-align: center;
+
+    }
+
+
+    #apioutput {
+        background-image: url("images/superbowllogo.webp");
+        background-size: cover;
+        display: flex;
+        opacity: 1;
+        overflow: inherit;
+        }
+
+    #nextBtn {
+        align-content: flex-end;
+        justify-content: center;
+        border: 1px solid black;
+        margin: 40px auto;
+        padding: 6px 6px 6px 6px;
+        border-radius: 12px;
+        font-size: 30px;
+    }
+
+    p, .tip {
+        font-size: 30px;
+        padding: 12px 12px 12px 12px;
     }
 
 

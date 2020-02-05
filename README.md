@@ -17,4 +17,9 @@
 2. Switched from flexbox to grid
 
 2/4/2020: 
-1. 
+1. Started loop function to loop each API stat
+
+2/5/2020: 
+1. Restarted function with assistance
+2. Final styling
+3. Submited to GITHub as MVP(minimal viable product)
