@@ -71,11 +71,11 @@ function renderTeams(data){
 // Each variable in slidesShowSlides will insert 1) Insert new API info 2) text to class=TIP 
 
 const Season  = ()=>{
-    $(".tip").text("Season Winning Percentage: Regular season wins divided by losses.");
+    $(".tip").text("Regular Season Winning Record.");
     $(".NE h1").text("Patriots")
-    $(".KC p").text("12-4");
-    $(".NE p").text("12-4");
-    $(".SF p").text("13-3");
+    $(".KC p").text("12-4 (AFC West)");
+    $(".NE p").text("12-4 (AFC East)");
+    $(".SF p").text("13-3 (NFC West)");
     $(".KC #KC1").text("")
     $(".KC #KC2").text("")
     $(".KC #KC3").text("")
@@ -88,7 +88,7 @@ const Season  = ()=>{
     };
 
 const HeadtoHead  = ()=>{
-    $(".tip").text("Head-to-head match in 2019-2020 season.");
+    $(".tip").text("'Usually the team with the most points wins the game!' -John Madden");
     $(".NE h1").text("Victory: SF")
     $(".KC p").text("17");
     $(".NE p").text("49ers WIN");
@@ -119,7 +119,7 @@ const QbRanking = ()=> {
     };
     
 const Offense  = ()=>{
-    $(".tip").text("Selected notable factors: (1)First Downs, (2)Offensive yards per play, (3)Total Touchdowns.");
+    $(".tip").text("Relevant team offensive stats: (1)First Downs, (2)Offensive yards per play, (3)Total Touchdowns.");
     $(".NE h1").text("Patriots")
     $(".KC p").text("");
     $(".NE p").text("");
@@ -130,13 +130,13 @@ const Offense  = ()=>{
     $(".NE #NE1").text("Number of First Downs: " + patriots[0].FirstDowns)
     $(".NE #NE2").text("Number of Offensive Yards Per Play: " + patriots[0].OffensiveYardsPerPlay)
     $(".NE #NE3").text("Total Touchdowns: " + patriots[0].Touchdowns)
-    $(".NE #NE1").text("Number of First Downs: " + niners[0].FirstDowns)
+    $(".SF #SF1").text("Number of First Downs: " + niners[0].FirstDowns)
     $(".SF #SF2").text("Number of Offensive Yards Per Play: " + niners[0].OffensiveYardsPerPlay)
     $(".SF #SF3").text("Total Touchdowns: " + niners[0].Touchdowns)
     };
 
 const Defense = ()=>{
-    $(".tip").text("Selected notable factors: (1)Opponent's First Downs, (2)Opponent's Offensive yards per play, (3)Opponent Touchdowns allowed");
+    $(".tip").text("Relevant team defensive stats: (1)Opponent's First Downs, (2)Opponent's Offensive yards per play, (3)Opponent Touchdowns allowed");
     $(".KC p").text("");
     $(".NE p").text("");
     $(".SF p").text("");
